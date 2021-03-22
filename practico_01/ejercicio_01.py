@@ -43,6 +43,7 @@ def maximo_ternario(a: float, b: float) -> float:
     """
     ok = a if (a > b) else b
     return ok
+    
     pass # Completar
 
 
