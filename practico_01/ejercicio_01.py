@@ -6,9 +6,7 @@ def maximo_basico(a: float, b: float) -> float:
     Restricción: No utilizar la función max"""
     if a < b:
         return b
-    else:
-        return a
-    pass # Completar
+    return a
 
 
 # NO MODIFICAR - INICIO
@@ -25,7 +23,7 @@ def maximo_libreria(a: float, b: float) -> float:
     Referencia: https://docs.python.org/3/library/functions.html#max
     """
     return max(a, b)
-    pass # Completar
+
 
 
 # NO MODIFICAR - INICIO
@@ -41,10 +39,8 @@ def maximo_ternario(a: float, b: float) -> float:
     """Re-escribir utilizando el operador ternario.
     Referencia: https://docs.python.org/3/reference/expressions.html#conditional-expressions
     """
-    ok = a if (a > b) else b
-    return ok
+    return a if a > b else b
 
-    pass # Completar
 
 
 # NO MODIFICAR - INICIO

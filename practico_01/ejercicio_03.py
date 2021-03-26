@@ -20,7 +20,7 @@ def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]
     else:
         c = a/b
     return c
-    pass # Completar
+
 
 
 # NO MODIFICAR - INICIO
@@ -44,9 +44,8 @@ def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, st
         return a*b
     elif b==0:
         return "Operación no válida"
-    else:
-        return a/b
-    pass # Completar
+    return a/b
+
 
 
 # NO MODIFICAR - INICIO
