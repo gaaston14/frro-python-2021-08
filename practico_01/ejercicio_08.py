@@ -45,10 +45,8 @@ assert not superposicion_in(test_list, (2, "world", 30.85))
 
 def superposicion_any(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
     """Re-Escribir utilizando sin bucles, el operador in y la funcion any.
-    Referencia: https://docs.python.org/3/library/functions.html#any
-    """
-    lista3=any(lista_1) in lista_2
-    print(lista3)
+    Referencia: https://docs.python.org/3/library/functions.html#any"""
+
     pass # Completar
 
 
@@ -66,7 +64,8 @@ def superposicion_set(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
     """Re-Escribir utilizando conjuntos (sets).
     Referencia: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset
     """
-    pass # Completar
+    return set(lista_1).intersection(set(lista_2))
+
 
 
 # NO MODIFICAR - INICIO

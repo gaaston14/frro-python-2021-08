@@ -36,7 +36,7 @@ def mitad(palabra: str) -> str:
     a = int((len(palabra) + 1) / 2)
     return palabra[:a]
 
-    pass # Completar
+
 
 
 # NO MODIFICAR - INICIO
