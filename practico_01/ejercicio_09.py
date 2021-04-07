@@ -7,10 +7,10 @@ def sumatoria_basico(n: int) -> int:
     Restricción: Utilizar un bucle for.
     """
     a = 0
-    for i in range(n):
+    for i in range(n): # range(n) crea una lista inmutable de n números enteros consecutivos que empieza en 0 y acaba en n - 1
         a=a+(i+1)
     return a
-    pass # Completar
+
 
 
 # NO MODIFICAR - INICIO
@@ -48,7 +48,11 @@ def sumatoria_reduce(n: int) -> int:
     """CHALLENGE OPCIONAL: Re-escribir utilizando reduce.
     Referencia: https://docs.python.org/3/library/functools.html#functools.reduce
     """
-    pass # Completar
+    suma = reduce(lambda x, y: x + y, range(n))  #reduce toma como argumento un conjunto de valores (una lista, una tupla, o cualquier objeto iterable)
+                                                  # y lo "reduce" a un único valor.
+
+    return suma
+
 
 
 # NO MODIFICAR - INICIO
