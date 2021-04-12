@@ -21,7 +21,11 @@ def generar_pares_clousure(initial: int = 0) -> Callable[[], int]:
         - Usar closures
         - Usar el modificador nonlocal
     """
-    pass # Completar
+    a=initial+2
+    def generador_pares():
+        nonlocal a
+        a=a+2
+    return generador_pares()
 
 
 # NO MODIFICAR - INICIO
