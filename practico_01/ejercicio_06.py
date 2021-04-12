@@ -51,11 +51,7 @@ def numeros_al_final_sorted(lista: List[Union[float, str]]) -> List[Union[float,
     """Re-escribir utilizando la función sorted con una custom key.
     Referencia: https://docs.python.org/3/library/functions.html#sorted
     """
-    sorted(lista, key=numeros_final)
-    print (lista)
-    return lista
-
-    pass # Completar
+    return sorted(lista, key=lambda x: type(x) != str)
 
 
 # NO MODIFICAR - INICIO
@@ -70,8 +66,6 @@ def numeros_al_final_filter(lista: List[Union[float, str]]) -> List[Union[float,
     """CHALLENGE OPCIONAL - Re-escribir utilizando la función filter.
     Referencia: https://docs.python.org/3/library/functions.html#filter
     """
-    pass # Completar
-
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":

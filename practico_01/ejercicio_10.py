@@ -10,7 +10,7 @@ def tiene_pares_basico(numeros: Iterable[int]) -> bool:
         if i % 2 == 0:
             return True
     return False
-    pass # Completar
+
 
 
 # NO MODIFICAR - INICIO
@@ -32,7 +32,7 @@ def tiene_pares_for_else(numeros: Iterable[int]) -> bool:
             return True
             break
     else: return False
-    pass # Completar
+
 
 
 # NO MODIFICAR - INICIO
@@ -50,7 +50,7 @@ def tiene_pares_any(numeros: Iterable[int]) -> bool:
     Referencia: https://docs.python.org/3/library/functions.html#any
     """
     return any(numero for numero in numeros if numero % 2 == 0)
-    pass # Completar
+
 
 
 # NO MODIFICAR - INICIO
