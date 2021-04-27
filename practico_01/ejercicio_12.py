@@ -49,11 +49,7 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
     """
     lista=[]
     for i, nombre in enumerate(nombres):
-      for j , precio in enumerate(precios):
-        for n , id in enumerate(ids):
-          if i==j==n:
-            a=nombre,precio,id
-            lista.append(a)
+        lista.append((nombre,precios[i],ids[i]))
     return tuple(lista)
 
 
