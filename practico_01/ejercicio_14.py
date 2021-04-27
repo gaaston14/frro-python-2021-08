@@ -15,6 +15,14 @@ from typing import Callable, Iterable
 def apply(lista: Iterable[int], func: Callable[[int], bool]) -> Iterable[bool]:
     """Toma una lista y una función que toma un parámetro y devuelve una lista
     con la función aplicada a todos los elementos."""
+
+     lista1=[]
+     for i in range(len(lista)): #
+         valor = lista[i].func
+         lista1.append(valor)
+    return tuple(lista1)
+
+
     pass # Completar
 
 
