@@ -43,7 +43,8 @@ assert combinar_basico(nombre_articulos, precio_articulos) == respuesta
 id_articulos = [6852, 1459, 3578]
 
 
-def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int]) -> Tuple[Any]:
+def combinar_enumerate(
+        nombres: List[str], precios: List[float], ids: List[int]) -> Tuple[Any]:
     """Re-Escribir utilizando enumerate y agregando un nuevo componente.
     Referencia: https://docs.python.org/3/library/functions.html#enumerate
     """
@@ -75,7 +76,8 @@ assert combinar_enumerate(
 id_articulos = [6852, 1459, 3578]
 
 
-def combinar_zip(nombres: List[str], precios: List[float], ids: List[int]) -> Tuple[Any]:
+def combinar_zip(
+        nombres: List[str], precios: List[float], ids: List[int]) -> Tuple[Any]:
     """Re-Escribir utilizando zip.
     Referencia: https://docs.python.org/3/library/functions.html#zip
     """

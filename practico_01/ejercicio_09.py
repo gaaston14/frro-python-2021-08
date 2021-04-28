@@ -10,8 +10,9 @@ def sumatoria_basico(n: int) -> int:
     Restricción: Utilizar un bucle for.
     """
     a = 0
-    for i in range(n):  # range(n) crea una lista inmutable de n números enteros consecutivos que empieza en 0 y acaba en n - 1
-        a = a+(i+1)
+    for i in range(
+            n):  # range(n) crea una lista inmutable de n números enteros consecutivos que empieza en 0 y acaba en n - 1
+        a = a + (i + 1)
     return a
 
 
@@ -29,7 +30,7 @@ def sumatoria_sum(n: int) -> int:
     Referencia: https://docs.python.org/3/library/functions.html#sum
     """
 
-    return sum(range(n+1))
+    return sum(range(n + 1))
 
 
 # NO MODIFICAR - INICIO

@@ -66,15 +66,17 @@ assert result == 28671512
 ###############################################################################
 
 
-def medir_tiempo(func: Callable[[Sequence[int], int], int]) -> Callable[[Sequence[int], int], Tuple[int, float]]:
+def medir_tiempo(func: Callable[[Sequence[int], int], int]
+                 ) -> Callable[[Sequence[int], int], Tuple[int, float]]:
     """Re-Escribir utilizando closures de forma tal que la función no requiera
     partial. En este caso se debe devolver una función que devuelva la tupla y
     tome una cantidad arbitraria de parámetros.
     """
-    def fun(parametros: Sequence[int] = lista, detencion: int = limite) -> Tuple[int, float]:
+    def fun(parametros: Sequence[int] = lista,
+            detencion: int = limite) -> Tuple[int, float]:
         inicio: float = perf_counter()
         resultado = func(parametros, detencion)
-        fin: float = perf_counter()-inicio
+        fin: float = perf_counter() - inicio
         return resultado, fin
 
     return fun

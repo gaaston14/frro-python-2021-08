@@ -3,7 +3,8 @@
 from typing import Any, Iterable
 
 
-def superposicion_basico(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
+def superposicion_basico(
+        lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
     """Toma dos listas y devuelve un booleano en base a si tienen al menos 1
     elemento en común.
     Restricción: Utilizar bucles anidados.
