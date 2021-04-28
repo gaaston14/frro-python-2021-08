@@ -42,5 +42,5 @@ nueva_funcion = partial(esta_entre_valores, min_=4, max_=7)
 
 # NO MODIFICAR - INICIO
 lista = [3, 4, 5, 6, 7, 8]
-assert [False, False, True, True, False, False] == lista(nueva_funcion)
+assert [False, False, True, True, False, False] == apply(lista, nueva_funcion)
 # NO MODIFICAR - FIN
