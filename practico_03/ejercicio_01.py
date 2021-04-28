@@ -8,6 +8,12 @@ class Rectangulo:
     Implementar la clase Rectangulo que contiene una base y una altura, y el
     método area.
     """
+
+    def _area_(self, base, altura):  # esta funcion que esta dentro de la clase Retangulo se llama metodo
+         self.base = base    # self.edad es diferente de edad porque el primero es un atrbuto y lo segundo es una variable
+         self.altura = altura
+         area = base * altura
+
     # Completar
 
 
