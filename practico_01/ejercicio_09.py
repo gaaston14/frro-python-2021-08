@@ -1,16 +1,18 @@
 """FOR, Sum, Reduce."""
 
 
+from functools import reduce
+
+
 def sumatoria_basico(n: int) -> int:
     """Devuelve la suma de los números de 1 a N.
 
     Restricción: Utilizar un bucle for.
     """
     a = 0
-    for i in range(n): # range(n) crea una lista inmutable de n números enteros consecutivos que empieza en 0 y acaba en n - 1
-        a=a+(i+1)
+    for i in range(n):  # range(n) crea una lista inmutable de n números enteros consecutivos que empieza en 0 y acaba en n - 1
+        a = a+(i+1)
     return a
-
 
 
 # NO MODIFICAR - INICIO
@@ -27,9 +29,7 @@ def sumatoria_sum(n: int) -> int:
     Referencia: https://docs.python.org/3/library/functions.html#sum
     """
 
-
     return sum(range(n+1))
-
 
 
 # NO MODIFICAR - INICIO
@@ -41,18 +41,15 @@ assert sumatoria_sum(100) == 5050
 ###############################################################################
 
 
-from functools import reduce
-
-
 def sumatoria_reduce(n: int) -> int:
     """CHALLENGE OPCIONAL: Re-escribir utilizando reduce.
     Referencia: https://docs.python.org/3/library/functools.html#functools.reduce
     """
-    suma = reduce(lambda x, y: x + y, range(n))  #reduce toma como argumento un conjunto de valores (una lista, una tupla, o cualquier objeto iterable)
-                                                  # y lo "reduce" a un único valor.
+    suma = reduce(lambda x, y: x + y, range(n)
+                  )  # reduce toma como argumento un conjunto de valores (una lista, una tupla, o cualquier objeto iterable)
+    # y lo "reduce" a un único valor.
 
     return suma
-
 
 
 # NO MODIFICAR - INICIO
@@ -69,7 +66,7 @@ def sumatoria_gauss(n: int) -> int:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando suma de Gauss.
     Referencia: https://es.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF
     """
-    pass # Completar
+    pass  # Completar
 
 
 # NO MODIFICAR - INICIO

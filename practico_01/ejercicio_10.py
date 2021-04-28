@@ -12,7 +12,6 @@ def tiene_pares_basico(numeros: Iterable[int]) -> bool:
     return False
 
 
-
 # NO MODIFICAR - INICIO
 assert tiene_pares_basico([1, 3, 5]) is False
 assert tiene_pares_basico([1, 3, 5, 6]) is True
@@ -31,8 +30,8 @@ def tiene_pares_for_else(numeros: Iterable[int]) -> bool:
         if i % 2 == 0:
             return True
             break
-    else: return False
-
+    else:
+        return False
 
 
 # NO MODIFICAR - INICIO
@@ -50,7 +49,6 @@ def tiene_pares_any(numeros: Iterable[int]) -> bool:
     Referencia: https://docs.python.org/3/library/functions.html#any
     """
     return any(numero for numero in numeros if numero % 2 == 0)
-
 
 
 # NO MODIFICAR - INICIO

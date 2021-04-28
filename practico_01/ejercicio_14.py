@@ -16,12 +16,10 @@ def apply(lista: Iterable[int], func: Callable[[int], bool]) -> Iterable[bool]:
     """Toma una lista y una función que toma un parámetro y devuelve una lista
     con la función aplicada a todos los elementos."""
 
-    lista1=[]
-    for i in lista: #
+    lista1 = []
+    for i in lista:
         lista1.append(func(i))
     return lista1
-
-
 
 
 # NO MODIFICAR - INICIO

@@ -19,9 +19,9 @@ def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
 
     Restricción: Resolver utilizando un bucle for.
     """
-    lista1=[]
+    lista1 = []
     for i in range(len(nombres)):
-        a= nombres[i],precios[i]
+        a = nombres[i], precios[i]
         lista1.append(a)
     return tuple(lista1)
 
@@ -47,15 +47,14 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
     """Re-Escribir utilizando enumerate y agregando un nuevo componente.
     Referencia: https://docs.python.org/3/library/functions.html#enumerate
     """
-    lista=[]
+    lista = []
     for i, nombre in enumerate(nombres):
-      for j , precio in enumerate(precios):
-        for n , id in enumerate(ids):
-          if i==j==n:
-            a=nombre,precio,id
-            lista.append(a)
+        for j, precio in enumerate(precios):
+            for n, id in enumerate(ids):
+                if i == j == n:
+                    a = nombre, precio, id
+                    lista.append(a)
     return tuple(lista)
-
 
 
 # NO MODIFICAR - INICIO
@@ -65,7 +64,8 @@ respuesta = (
     ("shampoo", 5.2, 3578),
 )
 
-assert combinar_enumerate(nombre_articulos, precio_articulos, id_articulos) == respuesta
+assert combinar_enumerate(
+    nombre_articulos, precio_articulos, id_articulos) == respuesta
 # NO MODIFICAR - FIN
 
 
@@ -89,7 +89,8 @@ respuesta = (
     ("shampoo", 5.2, 3578),
 )
 
-assert combinar_zip(nombre_articulos, precio_articulos, id_articulos) == respuesta
+assert combinar_zip(nombre_articulos, precio_articulos,
+                    id_articulos) == respuesta
 # NO MODIFICAR - FIN
 
 
@@ -106,7 +107,6 @@ def combinar_zip_args(*args) -> Tuple[Any]:
     Referencia: https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists
     """
     return tuple([tuple(list(x)) for x in zip(*args)])
-
 
 
 # NO MODIFICAR - INICIO

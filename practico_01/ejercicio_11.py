@@ -1,5 +1,6 @@
 """Sum, Compresión de Listas, Map, Filter, Reduce."""
 
+from functools import reduce
 from typing import Iterable
 
 
@@ -11,14 +12,13 @@ def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
     separar los pares.
     """
     cubos = []
-    suma=0
+    suma = 0
     for i in numeros:
         cubos.append(i ** 3)
     for j in cubos:
         if j % 2 == 0:
             suma = suma + j
     return suma
-
 
 
 # NO MODIFICAR - INICIO
@@ -39,7 +39,6 @@ def suma_cubo_pares_sum_list(numeros: Iterable[int]) -> int:
     return sum([x ** 3 for x in numeros if x % 2 == 0])
 
 
-
 # NO MODIFICAR - INICIO
 assert suma_cubo_pares_sum_list([1, 2, 3, 4, 5, 6]) == 288
 # NO MODIFICAR - FIN
@@ -53,8 +52,8 @@ def suma_cubo_pares_sum_gen(numeros: Iterable[int]) -> int:
     y la función sum.
     Referencia: https://docs.python.org/3/reference/expressions.html#generator-expressions
     """
-    return sum(list(x**3 for x in numeros if x%2 ==0))
-    pass # Completar
+    return sum(list(x**3 for x in numeros if x % 2 == 0))
+    pass  # Completar
 
 
 # NO MODIFICAR - INICIO
@@ -74,25 +73,26 @@ numeros = [1, 2, 3, 4, 5, 6]
 
 # Escribir una función lambda que eleve los elementos al cubo
 
-numeros_al_cubo = list(map(lambda x: x**3,numeros))
+numeros_al_cubo = list(map(lambda x: x**3, numeros))
 
 
 # Escribir una función lambda que permita filtrar todos los elementos pares
 
-numeros_al_cubo_pares = list(filter(lambda numeros:numeros%2==0,numeros_al_cubo))
+numeros_al_cubo_pares = list(
+    filter(lambda numeros: numeros % 2 == 0, numeros_al_cubo))
 
 
 # Escribir una función Lambda que sume todos los elementos
 
-from functools import reduce
 
-suma_numeros_al_cubo_pares = sum(map(lambda x:x,numeros_al_cubo_pares))
+suma_numeros_al_cubo_pares = sum(map(lambda x: x, numeros_al_cubo_pares))
 
 
 # Escribir una función Lambda que permita ordenar los elementos de la numeros
 # en base a si son pares o impares
 
-numeros_ordenada =list(filter(lambda x: x%2!=0 ,numeros))+ (list(filter(lambda x: x%2==0,numeros)))
+numeros_ordenada = list(filter(lambda x: x % 2 != 0, numeros)) + \
+    (list(filter(lambda x: x % 2 == 0, numeros)))
 
 # NO MODIFICAR - INICIO
 assert numeros_al_cubo == [1, 8, 27, 64, 125, 216]

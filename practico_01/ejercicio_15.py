@@ -15,6 +15,7 @@ Para poder utilizar un ejemplo real, se utilizará una función que calcula
 y cuenta las permutaciones (una operación costosa computacionalmente).
 """
 
+from functools import partial
 from itertools import permutations
 from time import perf_counter
 from typing import Callable, Sequence, Tuple
@@ -45,9 +46,6 @@ assert result == 28671512
 ###############################################################################
 
 
-from functools import partial
-
-
 def medir_tiempo(func: Callable[[], int]) -> Tuple[int, float]:
     """Toma una función y devuelve una dupla conteniendo en su primer elemento
     el resultado de la función y en su segundo elemento el tiempo de ejecución.
@@ -73,11 +71,11 @@ def medir_tiempo(func: Callable[[Sequence[int], int], int]) -> Callable[[Sequenc
     partial. En este caso se debe devolver una función que devuelva la tupla y
     tome una cantidad arbitraria de parámetros.
     """
-    def fun(parametros:Sequence[int]=lista, detencion:int=limite ) ->Tuple[int,float] :
-        inicio:float=perf_counter()
-        resultado=func(parametros,detencion)
-        fin:float=perf_counter()-inicio
-        return resultado,fin
+    def fun(parametros: Sequence[int] = lista, detencion: int = limite) -> Tuple[int, float]:
+        inicio: float = perf_counter()
+        resultado = func(parametros, detencion)
+        fin: float = perf_counter()-inicio
+        return resultado, fin
 
     return fun
 
@@ -187,7 +185,7 @@ sucesivas.
 @memoized
 def calcular_posibilidades_recursiva(lista: Sequence[int], limite: int) -> int:
     """Re-Escribir de manera recursiva"""
-    pass # Completar
+    pass  # Completar
 
 
 # NO MODIFICAR - INICIO
@@ -195,11 +193,13 @@ if __name__ == "__main__":
     print()
 
     result, elapsed = calcular_posibilidades_recursiva(lista, limite)
-    print(f"Tiempo: {elapsed:2.2f} segundos - Recursiva Memoized - 1ra Ejecución")
+    print(
+        f"Tiempo: {elapsed:2.2f} segundos - Recursiva Memoized - 1ra Ejecución")
     assert result == 28671512
 
     result, elapsed = calcular_posibilidades_recursiva(lista, limite)
-    print(f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - 2da Ejecución")
+    print(
+        f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - 2da Ejecución")
     assert result == 28671512
 
     print()
@@ -209,7 +209,8 @@ if __name__ == "__main__":
     assert result == 68588312
 
     result, elapsed = calcular_posibilidades_recursiva(lista, limite + 1)
-    print(f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - Parametro + 1")
+    print(
+        f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - Parametro + 1")
     assert result == 68588312
 
     print()
@@ -219,7 +220,8 @@ if __name__ == "__main__":
     assert result == 108505112
 
     result, elapsed = calcular_posibilidades_recursiva(lista, limite + 2)
-    print(f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - Parametro + 2")
+    print(
+        f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - Parametro + 2")
     assert result == 108505112
 
     print()
@@ -229,7 +231,8 @@ if __name__ == "__main__":
     assert result == 8713112
 
     result, elapsed = calcular_posibilidades_recursiva(lista, limite - 1)
-    print(f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - Parametro - 1")
+    print(
+        f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - Parametro - 1")
     assert result == 8713112
 
     print()
@@ -239,6 +242,7 @@ if __name__ == "__main__":
     assert result == 2060312
 
     result, elapsed = calcular_posibilidades_recursiva(lista, limite - 2)
-    print(f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - Parametro - 2")
+    print(
+        f"Tiempo: {elapsed:2.8f} segundos - Recursiva Memoized - Parametro - 2")
     assert result == 2060312
 # NO MODIFICAR - FIN
