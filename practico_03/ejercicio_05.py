@@ -2,6 +2,21 @@
 
 
 class Auto:
+    def __init__(self,nombre,precio):
+        self.__nombre = nombre
+        self.__precio= precio
+
+    @property
+    def nombre(self ):
+        return self.__nombre.capitalize()
+
+
+    @property
+    def precio(self) :
+        return round(self.__precio,2)
+    @precio.setter
+    def precio(self, value) :
+        self.__precio=value
     """La clase auto tiene dos propiedades, precio y marca. La marca se define
     obligatoriamente al construir la clase y siempre que se devuelve, se 
     devuelve con la primer letra en mayúscula y no se puede modificar. El precio
@@ -38,7 +53,18 @@ from dataclasses import dataclass
 @dataclass
 class Auto:
     """Re-Escribir utilizando DataClasses"""
+    __nombre:str
+    __precio:float
 
+    @property
+    def nombre(self):
+        return self.__nombre.capitalize()
+    @property
+    def precio(self):
+        return round(self.__precio,2)
+    @precio.setter
+    def precio(self,value):
+        self.__precio=value
     # Completar
 
 
