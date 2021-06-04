@@ -1,4 +1,4 @@
-# NOMBRE_DEL_PROYECTO
+# Pandemic Control
 
 Este es un archivo que debe completarse con los datos utilizados en el TPI. Este archivo puede modificarse en el tiempo, no obstante siempre debe mantenerse en un estado consistente con el desarrollo.
 
