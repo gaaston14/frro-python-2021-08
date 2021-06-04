@@ -10,9 +10,10 @@ class Articulo:
           clase (@classmethod) con una variable de clase
     """
     _last_id = 0
-    def __init__(self,nombre:str = "") -> None:
-        self.nombre:str = nombre
-        self.id_:int = self._get_next_id()
+
+    def __init__(self, nombre: str = "") -> None:
+        self.nombre: str = nombre
+        self.id_: int = self._get_next_id()
 
     @classmethod
     def _get_next_id(cls):
