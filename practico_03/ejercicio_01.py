@@ -4,11 +4,22 @@ from typing import Optional
 
 
 class Rectangulo:
+    def __init__(
+            self,
+            base: Optional[float] = None,
+            altura: Optional[float] = None) -> None:
+        self.base: float = base
+        self.altura: float = altura
+
+    def area(self) -> float:
+        if (self.base and self.altura) is not None:
+            return self.base * self.altura
+        else:
+            return 0
     """
     Implementar la clase Rectangulo que contiene una base y una altura, y el
     método area.
     """
-    # Completar
 
 
 # NO MODIFICAR - INICIO
