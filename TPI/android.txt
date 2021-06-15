@@ -1,0 +1,3 @@
+title=Stockqwe
+author=Gaston
+orientation=landscape
