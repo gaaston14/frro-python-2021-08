@@ -46,10 +46,6 @@ ScreenManager:
             pos_hint:{"center_x":.5}
             on_press: root.consultar()
             on_release: root.manager.current="menu" if root.consultar() else print("error")
-        MDRoundFlatButton:
-            text: "Registrar"
-            pos_hint:{"center_x":.5}
-            on_press: root.registrar()
 
         MDLabel:
             id:label

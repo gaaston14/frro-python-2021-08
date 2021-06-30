@@ -13,17 +13,23 @@ class Usuarios(db.Base):
         return f'usuario({self.usuario}, {self.contraseña})'
     def __str__(self):
         return self.usuario
-class material(db.Base):
-    __tablename__= 'material'
-    codigo = Column (Integer , nullable=False, primary_key=True)
-    descripcion = Column(String(20), nullable=False)
-    def __init__(self, codigo, descripcion):
-        self.codigo = codigo
-        self.descripcion = descripcion
+class cliente(db.Base):
+    __tablename__= 'cliente'
+    dni = Column (Integer , nullable=False, primary_key=True)
+    nombre = Column(String(20), nullable=False)
+    apellido = Column(String(20), nullable=False)
+    direccion = Column(String(20), nullable=False)
+    telefono = Column(Integer, nullable=False)
+    def __init__(self, dni, nombre, apellido,direccion, telefono):
+        self.dni = dni
+        self.nombre = nombre
+        self.apellido = apellido
+        self.direccion = direccion
+        self.telefono = telefono
     def __repr__(self):
-        return f'usuario({self.codigo}, {self.descripcion})'
+        return f'usuario({self.dni}, {self.nombre}, {self.apellido}, {self.direccion}, , {self.telefono})'
     def __str__(self):
-        return self.codigo
+        return self.dni
 class mesa(db.Base):
     __tablename__= 'mesa'
     idmesa = Column (Integer , nullable=False, primary_key=True)
